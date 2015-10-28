@@ -8,6 +8,8 @@
     "semi": [2, "always"]
   },
   "env": {
+    "es6": true,
+    "node": true,
     "amd": true,
     "browser": true
   },

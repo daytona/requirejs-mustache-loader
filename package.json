@@ -4,7 +4,8 @@
   "description": "Load Mustache templates dynamically, compile during build and auto resolve partials",
   "main": "main.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "node test/program.js",
+    "posttest": "#eslint ."
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,12 @@
     "eslint": "^1.7.3",
     "mustache": "^2.2.0",
     "requirejs": "^2.1.20",
+    "tape": "^4.2.2",
+    "text": "git+https://github.com/requirejs/text.git"
+  },
+  "peerDependencies": {
     "mustache": "^2.2.0",
+    "requirejs": "^2.1.20",
     "text": "git+https://github.com/requirejs/text.git"
   }
 }

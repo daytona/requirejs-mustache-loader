@@ -1,2 +1,5 @@
 # Libraries
 node_modules
+
+# Built files
+test/build.js
