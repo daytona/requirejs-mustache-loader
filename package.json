@@ -1,6 +1,6 @@
 {
   "name": "requirejs-mustache-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Load Mustache templates dynamically, compile during build and auto resolve partials",
   "main": "main.js",
   "scripts": {

@@ -51,7 +51,7 @@ define([
        * Expose the underlying template string and partials
        */
 
-      render.template = contents;
+      render.text = contents;
       render.partials = partials;
 
       /**
@@ -90,7 +90,7 @@ define([
             refs.push({
               name: name,
               id: ('partial_' + (id += 1)),
-              template: escapeTemplate(contents),
+              text: escapeTemplate(contents),
               partials: Object.keys(partials).map(function (key, index, list) {
                 return {
                   name: options.resolve(key),
@@ -236,7 +236,7 @@ define([
          * tot ake that intp concideration.
          */
 
-        partials[key] = (partial.template || partial);
+        partials[key] = (partial.text || partial);
 
         /**
          * Recursively parse partials
