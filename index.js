@@ -76,7 +76,7 @@ define([
 
       text.get(parent.toUrl(name), function (contents) {
         var partials = {};
-        var all = contents.match(PARTIAL_REG_ALL);
+        var all = dedupe(contents.match(PARTIAL_REG_ALL));
         var queue = (all && all.length);
 
         function done(contents, partials) {
@@ -154,6 +154,24 @@ define([
         });
       });
     }
+  }
+
+  /**
+   * Return a new array without duplicates
+   * @param  {Array} arr List of items to compare
+   * @return {Array}     List without duplicates
+   */
+
+  function dedupe(arr) {
+    if (!arr) { return arr; }
+
+    var uniq = [];
+
+    arr.forEach(function (item) {
+      if (uniq.indexOf(item) === -1) { uniq.push(item); }
+    });
+
+    return uniq;
   }
 
   /**
