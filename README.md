@@ -1,4 +1,4 @@
-# requirejs-mustache
+# requirejs-mustache-loader
 
 > Load Mustache templates dynamically, compile during build and auto resolve partials
 
@@ -43,7 +43,7 @@ For resolving file paths a method, called `resolve`, can be supplied using `requ
 require.config({
   packages: [{
     name: 'template',
-    location: 'node_modules/requirejs-mustache',
+    location: 'node_modules/requirejs-mustache-loader',
     main: 'index'
   }, {
     name: 'mustache',
