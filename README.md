@@ -18,7 +18,7 @@ Hello {{> ./name.mustache }}!
 
 ```javascript
 // app.js
-define([template!index.mustache], function (template) {
+define(['template!index.mustache'], template => {
   template.render({ name: 'brave new world' }); // -> "Hello <strong>brave new world</strong>!"
 });
 ```
@@ -28,11 +28,11 @@ define([template!index.mustache], function (template) {
 The package can be installed via [npm](https://www.npmjs.com) and [Bower](http://bower.io).
 
 ```
-$ npm install --save requirejs-mustache
+$ npm install --save requirejs-mustache-loader
 ```
 
 ```
-$ bower install requirejs-mustache
+$ bower install requirejs-mustache-loader
 ```
 
 ## Resolving file names
