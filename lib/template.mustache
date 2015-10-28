@@ -1,0 +1,31 @@
+define('{{{ plugin }}}!{{{ name }}}', [
+  'mustache',
+  '{{{ plugin }}}'{{# partials.length }},{{/ partials.length }}
+  {{# partials }}
+  '{{{ plugin }}}!{{{ name }}}'{{^ is_last}},{{/ is_last }}
+  {{/ partials }}
+], function (
+  mustache,
+  plugin{{# partials.length }},{{/ partials.length }}
+  {{# partials }}
+  {{ id }}{{^ is_last}},{{/ is_last }}
+  {{/ partials }}
+) {
+  'use strict';
+
+  var template = '{{{ template }}}';
+  var partials = plugin.compile({
+    {{# partials }}
+    '{{{ partial }}}': {{ id }}{{^ is_last}},{{/ is_last }}
+    {{/ partials }}
+  });
+
+  function render(data) {
+    return mustache.render(template, data, partials);
+  };
+
+  render.template = template;
+  render.partials = partials;
+
+  return render;
+});

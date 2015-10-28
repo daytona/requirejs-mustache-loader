@@ -1,0 +1,32 @@
+{
+  "name": "requirejs-mustache",
+  "version": "1.0.0",
+  "description": "Load Mustache templates dynamically, compile during build and auto resolve partials",
+  "main": "main.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daytona/requirejs-mustache.git"
+  },
+  "keywords": [
+    "require",
+    "requirejs",
+    "mustache"
+  ],
+  "author": "Carl Törnqvist <calle.tornqvist@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daytona/requirejs-mustache/issues"
+  },
+  "homepage": "https://github.com/daytona/requirejs-mustache#readme",
+  "devDependencies": {
+    "bower": "^1.6.3",
+    "eslint": "^1.7.3",
+    "mustache": "^2.2.0",
+    "requirejs": "^2.1.20",
+    "mustache": "^2.2.0",
+    "text": "git+https://github.com/requirejs/text.git"
+  }
+}
