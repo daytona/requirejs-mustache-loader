@@ -13,7 +13,7 @@ define('{{{ plugin }}}!{{{ name }}}', [
 ) {
   'use strict';
 
-  var template = '{{{ template }}}';
+  var template = '{{{ text }}}';
   var partials = plugin.compile({
     {{# partials }}
     '{{{ partial }}}': {{ id }}{{^ is_last}},{{/ is_last }}
@@ -24,7 +24,7 @@ define('{{{ plugin }}}!{{{ name }}}', [
     return mustache.render(template, data, partials);
   };
 
-  render.template = template;
+  render.text = template;
   render.partials = partials;
 
   return render;
