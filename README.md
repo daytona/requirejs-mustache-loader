@@ -45,6 +45,14 @@ require.config({
     name: 'template',
     location: 'node_modules/requirejs-mustache',
     main: 'index'
+  }, {
+    name: 'mustache',
+    location: 'node_modules/mustache',
+    main: 'mustache'
+  }, {
+    name: 'text',
+    location: 'node_modules/text',
+    main: 'text'
   }],
 
   paths: {
@@ -57,6 +65,14 @@ require.config({
     }
   }
 });
+```
+
+## Regarding peer dependencies
+
+This plugin depends on the RequireJS [text plugin](https://github.com/requirejs/text) available under the `text` namespace and [mustache](https://github.com/janl/mustache.js) available under the `mustache` namespace. I.e. this should resolve just fine:
+
+```javascripts
+require(['text', 'mustache']);
 ```
 
 ## License
