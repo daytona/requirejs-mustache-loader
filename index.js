@@ -44,7 +44,7 @@ define([
 
     process(name, function (contents, partials) {
       function render(data) {
-        return mustache.render(contents, data, partials);
+        return mustache.render(contents, (data || {}), partials);
       }
 
       /**
