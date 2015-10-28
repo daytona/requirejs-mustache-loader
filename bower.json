@@ -1,5 +1,5 @@
 {
-  "name": "requirejs-mustache",
+  "name": "requirejs-mustache-loader",
   "description": "Load Mustache templates dynamically, compile during build and auto resolve partials",
   "main": "index.js",
   "authors": [
@@ -14,7 +14,7 @@
   "moduleType": [
     "amd"
   ],
-  "homepage": "https://github/daytona/requirejs-mustache",
+  "homepage": "https://github/daytona/requirejs-mustache-loader",
   "ignore": [
     "**/.*",
     "node_modules",
