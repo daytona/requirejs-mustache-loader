@@ -4,7 +4,7 @@
 
 The biggest itch while working with Mustache (and many other front-end template engines) is the need to statically declare partials when rendering a template. Adding a partial in some template requires that you also import it to your JavaScript module and declare it as a partial.
 
-With this plug for [RequireJS](http://requirejs.org) none of that is necessary, instead, this is possible:
+With this plugin for [RequireJS](http://requirejs.org) none of that is necessary, instead, this is possible:
 
 ```mustache
 {{! index.mustache }}
@@ -19,7 +19,7 @@ Hello {{> ./name.mustache }}!
 ```javascript
 // app.js
 define(['template!index.mustache'], template => {
-  template.render({ name: 'brave new world' }); // -> "Hello <strong>brave new world</strong>!"
+  template({ name: 'brave new world' }); // -> "Hello <strong>brave new world</strong>!"
 });
 ```
 
@@ -37,7 +37,7 @@ $ bower install requirejs-mustache-loader
 
 ## Resolving file names
 
-For resolving file paths a method, called `resolve`, can be supplied using `require.config`. The `resolve` method is called when transforming partial names as defined in templates to a file path.
+For resolving file paths, a method called `resolve`, can be supplied using `require.config`. The `resolve` method is called when transforming partial names as defined in templates to a file path.
 
 ```javascript
 require.config({
@@ -61,7 +61,7 @@ require.config({
 
   mustache: {
     resolve: function (name) {
-      return ('templates/' + name + '.mustache');
+      return `templates/${ name }.mustache`);
     }
   }
 });
