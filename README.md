@@ -61,9 +61,21 @@ require.config({
 
   mustache: {
     resolve: function (name) {
-      return `templates/${ name }.mustache`);
+      return 'templates/' + name + '.mustache';
     }
   }
+});
+```
+
+## Member properties
+
+Apart from just the render method, also the bare template string and all partials are exposed to the template function.
+
+```javascript
+require(['template!index.mustache'], function (template) {
+  template.text; // Hello {{> ./name.mustache }}!
+  template.partials; // { './name.mustache': '<strong>{{ name }}</strong>' }
+  template({ name: 'world' }); // Hello world!
 });
 ```
 
